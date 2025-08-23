@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="../image/payoo.png" type="image/x-icon">
@@ -13,54 +13,97 @@
 </head>
 
 <body class="bg-[#1E1E1E10] min-h-[100vh]">
-    <!-- nav bar -->
-    <div class="min-h-[50px] max-w-lg mx-auto border-b-1 border-gray-400 p-4 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="../image/Group.png" alt="" class="h-[50px]">
-            <div class="ml-3">
-                <h2 class="font-bold">$ <span>45000</span></h2>
-                <p>Available Balance</p>
+
+    <div class="bg-white rounded-b-2xl max-w-lg mx-auto">
+        <!-- nav bar -->
+        <div class="min-h-[50px] max-w-lg mx-auto border-b-1 border-gray-400 p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="../assets/image/Group.png" alt="" class="h-[50px]">
+                <div class="ml-3">
+                    <h2 class="font-bold">$ <span>45000</span></h2>
+                    <p>Available Balance</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn"><img src="../assets/icons/logout.svg" alt="" class="rotate-180">Log Out</button>
             </div>
         </div>
+        <!-- menue section -->
+        <div class="p-3">
+            <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+            <p class=" text-[#08080890]">Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+        </div>
+        <!-- menu grid  -->
+        <div class="min-h-[200px] grid grid-cols-3 max-w-lg mx-auto gap-2 p-3">
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/wallet1.png" alt="">
+                <h2>Add Money</h2>
+            </div>
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/send1.png" alt="">
+                <h2>Cashout</h2>
+            </div>
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/money1.png" alt="">
+                <h2>Transfer Money</h2>
+            </div>
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/bonus1.png" alt="">
+                <h2>Get Bonus</h2>
+            </div>
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/purse1.png" alt="">
+                <h2>Pay Bill</h2>
+            </div>
+            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+                <img class="mx-auto" src="../assets/image/transaction1.png" alt="">
+                <h2>Transaction</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="all_forms max-w-lg mx-auto">
+        <!-- add money  -->
         <div>
-            <button class="btn"><img src="../icons/logout.svg" alt="" class="rotate-180">Default</button>
+            <h1 class="font-bold my-2 ml-4">Add Money</h1>
+            <form action="" class="bg-white rounded-2xl p-8">
+                <div>
+                    <label for="" class="font-semibold">Select a Bank</label><br>
+                    <select class="select !bg-[#1E1E1E10] mt-2 !rounded-3xl !w-full">
+                        <option disabled selected>select bank</option>
+                        <option value="">Dhaka Bank</option>
+                        <option value="">Agrani Bank</option>
+                        <option value="">Dutch Bangla Bank</option>
+                        <option value="">Sonali Bank</option>
+                        <option value="">Rupali bank</option>
+                        <option value="">IFIC Bank</option>
+                        <option value="">Islami Bank</option>
+                        <option value="">AB Bank</option>
+                        <option value="">First Security Bank</option>
+                        <option value="">Jamuna Bank</option>
+                    </select>
+                </div>
+
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Bank Account Number</label><br>
+                    <input id="" type="text" placeholder="Enter your number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Add to account</label><br>
+                    <input id="" type="text" placeholder="Add an amount" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Pin Number</label><br>
+                    <input id="" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <button id="log_in_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Primary</button>
+
+            </form>
         </div>
     </div>
-    <!-- menue section -->
-     <div>
-        <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
-        <p class=" text-[#08080890]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
-     </div>
-    <div class="border-2 border-red-500 h-[200px]">
-
-
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/wallet1.png" alt="">
-            <h2>Add Money</h2>
-        </div>
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/send1.png" alt="">
-            <h2>Cashout</h2>
-        </div>
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/money1.png" alt="">
-            <h2>Transfer Money</h2>
-        </div>
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/bonus1.png" alt="">
-            <h2>Get Bonus</h2>
-        </div>
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/purse1.png" alt="">
-            <h2>Pay Bill</h2>
-        </div>
-        <div class="border-2 border-green-500 text-center  p-3">
-            <img class="mx-auto" src="../image/transaction1.png" alt="">
-            <h2>Transaction</h2>
-        </div>
-
-     </div>
-
 
 </body>
 

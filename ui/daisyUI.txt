@@ -1,0 +1,5 @@
+<!-- form -->
+<div class="mt-3">
+    <label for="" class="font-semibold">4 Digit Pin</label><br>
+    <input id="pin_number" type="text" placeholder="4 Digit PIN" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 w-full">
+</div>
