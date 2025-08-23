@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-[#1E1E1E10] h-[100vh] flex flex-col justify-center items-center">
+
+    <div class="h-[130px] w-[250px] bg-[url(./image/bg.png)] bg-cover flex justify-center items-center">
+        <img src="image/Group.png" alt="">
+    </div>
+
+
+    <form action="" class="bg-white rounded-2xl padding p-10">
+        <div class="">
+            <label for="" class="font-semibold">Mobile Number</label><br>
+            <input id="mobile_number" type="text" placeholder="Enter your number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2"/>
+        </div>
+        <div class="mt-3">
+            <label for="" class="font-semibold" >4 Digit Pin</label><br>
+            <input id="pin_number" type="text" placeholder="4 Digit PIN" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2">
+        </div>
+        <button id="log_in_btn" class="btn btn-primary !bg-[#0874F2] w-full !rounded-3xl mt-5">Primary</button>
+    </form>
+<script src="js/script.js"></script>
+</body>
+</html>
