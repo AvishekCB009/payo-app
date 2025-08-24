@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +9,16 @@
     <link rel="shortcut icon" href="../image/payoo.png" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=logout" />
+    <link rel="stylesheet" href="../styles/design.css">
 </head>
-
 <body class="bg-[#1E1E1E10] min-h-[100vh]">
-
     <div class="bg-white rounded-b-2xl max-w-lg mx-auto">
         <!-- nav bar -->
         <div class="min-h-[50px] max-w-lg mx-auto border-b-1 border-gray-400 p-4 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="../assets/image/Group.png" alt="" class="h-[50px]">
                 <div class="ml-3">
-                    <h2 class="font-bold">$ <span>45000</span></h2>
+                    <h2 class="font-bold">$ <span id="balance">45000</span></h2>
                     <p>Available Balance</p>
                 </div>
             </div>
@@ -36,11 +34,11 @@
         </div>
         <!-- menu grid  -->
         <div class="min-h-[200px] grid grid-cols-3 max-w-lg mx-auto gap-2 p-3">
-            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+            <div id="grid_menu_add" class="border-2 rounded-2xl border-gray-100 text-center p-3">
                 <img class="mx-auto" src="../assets/image/wallet1.png" alt="">
                 <h2>Add Money</h2>
             </div>
-            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+            <div id="grid_menu_cashout"class="border-2 rounded-2xl border-gray-100 text-center p-3">
                 <img class="mx-auto" src="../assets/image/send1.png" alt="">
                 <h2>Cashout</h2>
             </div>
@@ -60,51 +58,66 @@
                 <img class="mx-auto" src="../assets/image/transaction1.png" alt="">
                 <h2>Transaction</h2>
             </div>
-
         </div>
-
     </div>
-
-    <div class="all_forms max-w-lg mx-auto">
+    <div class="all_section max-w-lg mx-auto">
         <!-- add money  -->
-        <div>
+        <div id="add_money_form">
             <h1 class="font-bold my-2 ml-4">Add Money</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 <div>
                     <label for="" class="font-semibold">Select a Bank</label><br>
-                    <select class="select !bg-[#1E1E1E10] mt-2 !rounded-3xl !w-full">
+                    <select id="bank_name" class="select !bg-[#1E1E1E10] mt-2 !rounded-3xl !w-full">
                         <option disabled selected>select bank</option>
-                        <option value="">Dhaka Bank</option>
-                        <option value="">Agrani Bank</option>
-                        <option value="">Dutch Bangla Bank</option>
-                        <option value="">Sonali Bank</option>
-                        <option value="">Rupali bank</option>
-                        <option value="">IFIC Bank</option>
-                        <option value="">Islami Bank</option>
-                        <option value="">AB Bank</option>
-                        <option value="">First Security Bank</option>
-                        <option value="">Jamuna Bank</option>
+                        <option>Dhaka Bank</option>
+                        <option>Agrani Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                        <option>Sonali Bank</option>
+                        <option>Rupali bank</option>
+                        <option>IFIC Bank</option>
+                        <option>Islami Bank</option>
+                        <option>AB Bank</option>
+                        <option>First Security Bank</option>
+                        <option>Jamuna Bank</option>
                     </select>
                 </div>
-
                 <div class="mt-5">
                     <label for="" class="font-semibold">Bank Account Number</label><br>
-                    <input id="" type="text" placeholder="Enter your number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                    <input id="account_number_to_add" type="text" placeholder="Enter your account number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
                 </div>
                 <div class="mt-5">
                     <label for="" class="font-semibold">Add to account</label><br>
-                    <input id="" type="text" placeholder="Add an amount" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                    <input id="added_amount" type="text" placeholder="Add an amount" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
                 </div>
                 <div class="mt-5">
                     <label for="" class="font-semibold">Pin Number</label><br>
-                    <input id="" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                    <input id="send_pin_number" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
                 </div>
-                <button id="log_in_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Primary</button>
-
+                <button id="add_money_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Add money</button>
+            </form>
+        </div>
+        <!-- send money  -->
+        <div id="cashout_money_form">
+            <h1 class="font-bold my-2 ml-4">Cashout Money</h1>
+            <form action="" class="bg-white rounded-2xl p-8">
+                <div class="">
+                    <label for="" class="font-semibold">Agent number</label><br>
+                    <input id="agent_number_to_withdraw" type="text" placeholder="Enter Agent number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Withdraw from account</label><br>
+                    <input id="withdraw_amount" type="text" placeholder="Add an amount" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Pin Number</label><br>
+                    <input id="withdraw_pin_number" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <button id="withdraw_money_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Withdraw money</button>
             </form>
         </div>
     </div>
 
-</body>
 
+    <script src="../js/script.js"></script>
+</body>
 </html>
