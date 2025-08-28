@@ -1,4 +1,3 @@
-// log in fuctionalities
 document.getElementById('log_in_btn')
     .addEventListener('click',function(e){
         e.preventDefault()

@@ -26,7 +26,7 @@
                 <button class="btn"><img src="../assets/icons/logout.svg" alt="" class="rotate-180">Log Out</button>
             </div>
         </div>
-        <!-- menue section -->
+        <!-- menu section -->
         <div class="p-3">
             <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
             <p class=" text-[#08080890]">Enjoy easy and convenient financial services with us. Cashout charge is low and
@@ -42,15 +42,15 @@
                 <img class="mx-auto" src="../assets/image/send1.png" alt="">
                 <h2>Cashout</h2>
             </div>
-            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+            <div id='' class="border-2 rounded-2xl border-gray-100 text-center p-3">
                 <img class="mx-auto" src="../assets/image/money1.png" alt="">
                 <h2>Transfer Money</h2>
             </div>
-            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+            <div id="grid_menu_bonus" class="border-2 rounded-2xl border-gray-100 text-center p-3">
                 <img class="mx-auto" src="../assets/image/bonus1.png" alt="">
                 <h2>Get Bonus</h2>
             </div>
-            <div class="border-2 rounded-2xl border-gray-100 text-center p-3">
+            <div id="grid_menu_pay" class="border-2 rounded-2xl border-gray-100 text-center p-3">
                 <img class="mx-auto" src="../assets/image/purse1.png" alt="">
                 <h2>Pay Bill</h2>
             </div>
@@ -62,7 +62,7 @@
     </div>
     <div class="all_section max-w-lg mx-auto">
         <!-- add money  -->
-        <div id="add_money_form">
+        <div id="add_money_form" class="hidden toggle_form">
             <h1 class="font-bold my-2 ml-4">Add Money</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 <div>
@@ -97,7 +97,7 @@
             </form>
         </div>
         <!-- send money  -->
-        <div id="cashout_money_form">
+        <div id="cashout_money_form" class="hidden toggle_form">
             <h1 class="font-bold my-2 ml-4">Cashout Money</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 <div class="">
@@ -113,6 +113,50 @@
                     <input id="withdraw_pin_number" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
                 </div>
                 <button id="withdraw_money_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Withdraw money</button>
+            </form>
+        </div>
+        <!-- get Bonus -->
+        <div id="bonus_money_form" class="hidden toggle_form">
+            <h1 class="font-bold my-2 ml-4">Cashout Money</h1>
+            <form action="" class="bg-white rounded-2xl p-8">
+                <div class="">
+                    <label for="" class="font-semibold">Add coupon code</label><br>
+                    <input id="coupon_code_number" type="text" placeholder="Code - 557799" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                    </div>
+                <div class="mt-5">
+                    <label for="" class="font-semibold">Pin Number</label><br>
+                    <input id="bonus_pin_number" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <button id="bonus_money_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Get bonus</button>
+            </form>
+        </div>
+        <!-- Pay bill -->
+        <div id="pay_money_form" class=" toggle_form">
+            <h1 class="font-bold my-2 ml-4">Add Money</h1>
+            <form action="" class="bg-white rounded-2xl p-8">
+                <div>
+                    <label class="font-semibold">Select a Bank</label><br>
+                    <select id="payment_type" class="select !bg-[#1E1E1E10] mt-2 !rounded-3xl !w-full">
+                        <option disabled selected>select payment type</option>
+                        <option>Electricity Bill</option>
+                        <option>Gas Bill</option>
+                        <option>Internet Bill</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="mt-5">
+                    <label class="font-semibold">Bank Biller Account Number</label><br>
+                    <input id="account_number_to_pay" type="text" placeholder="Enter biller's account number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label class="font-semibold">Payment amount</label><br>
+                    <input id="pay_amount" type="text" placeholder="Add payment amount" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <div class="mt-5">
+                    <label class="font-semibold">Pin Number</label><br>
+                    <input id="pay_pin_number" type="text" placeholder="Enter 4 digit pin number" class="input !bg-[#1E1E1E10] !rounded-3xl mt-2 !w-full"/>
+                </div>
+                <button id="pay_money_btn" class="btn btn-primary !bg-[#0874F2] !rounded-3xl mt-7 w-full">Pay Now</button>
             </form>
         </div>
     </div>
